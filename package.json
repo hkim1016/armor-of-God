@@ -1,0 +1,19 @@
+{
+  "name": "armor-of-god",
+  "version": "1.0.0",
+  "description": "A web app to save Bible verses",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hkim1016/armor-of-God.git"
+  },
+  "author": "hkim1016",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hkim1016/armor-of-God/issues"
+  },
+  "homepage": "https://github.com/hkim1016/armor-of-God#readme"
+}
