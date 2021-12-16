@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/hkim1016/armor-of-God/issues"
   },
-  "homepage": "https://github.com/hkim1016/armor-of-God#readme"
+  "homepage": "https://github.com/hkim1016/armor-of-God#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
