@@ -1,8 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Shanti&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     /* background-color: #24252A; */
+}
+
+.ephesians {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+
+.about {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+}
+
+.contact {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+}
+
+.contact a {
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 25px;
+}
+
+#ephesians-verse, p {
+    font-family: "Shanti", sans-serif;
+}
+
+#ephesians-source {
+    font-family: "Roboto Slab", sans-serif;
 }
 
 li, a, button, h1 {
@@ -32,6 +72,7 @@ header {
 .navlinks li {
     display: inline-block;
     padding: 0px 20px;
+    margin-top: 18px;
 }
 
 .navlinks li a {
@@ -44,7 +85,7 @@ header {
 
 button {
     margin-left: 20px;
-    padding: 9px 25px;
+    padding: 7px 25px;
     background-color: rgba(0, 136, 169, 1);
     border: none;
     border-radius: 50px;
