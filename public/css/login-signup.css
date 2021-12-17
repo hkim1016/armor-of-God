@@ -6,7 +6,14 @@
     text-align: center;
     cursor: pointer;
     text-transform: uppercase;
+    /* background-color: #F5F3F3; */
+    border-radius: 30px;
 }
+
+/* .signup:hover, .login:hover {
+    background: #F5F3F3;
+    border-radius: 30px;
+} */
 
 form {
     width: 100%;
@@ -20,8 +27,8 @@ form {
     width: 30%;
     height: 50%;
     text-align: center;
-    background-color: #F5F3F3;
-    border-radius: 30px;
+    /* background-color: #F5F3F3; */
+    /* border-radius: 30px; */
 }
 
 .login-form, .signup-form {
@@ -30,6 +37,7 @@ form {
     margin: 40px 0px;
     box-sizing: border-box;
     height: 400px;
+    /* background-color: #F5F3F3; */
 }
 
 input {
@@ -53,6 +61,6 @@ input:focus {
     border: 0px;
 }
 
-#login {
+/* #login {
     margin-top: 87px;
-}
+} */
