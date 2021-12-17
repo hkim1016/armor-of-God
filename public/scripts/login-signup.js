@@ -1,22 +1,12 @@
 $(".signup-form").hide();
 $(".login").css("background", "#F5F3F3");
 
-$(".signup").hover(() => {
-    $("this").css("background-color", "#F5F3F3");
-});
-
-$(".login").hover(() => {
-    $("this").css("background-color", "#F5F3F3");
-});
-
 $(".login").click(() => {
     $(".signup-form").hide();
     $(".login-form").show();
     $(".signup").css("background", "none");
     $(".login").css("background", "#F5F3F3");
     $(".signup-form input").val("");
-    // $(".signup").css("border-radius", "0px");
-    // $(".login").css("border-radius", "30px");
 });
 
 $(".signup").click(() => {
@@ -25,11 +15,17 @@ $(".signup").click(() => {
     $(".login").css("background", "none");
     $(".signup").css("background", "#F5F3F3");
     $(".login-form input").val("");
-    // $(".signup").css("border-radius", "30px");
-    // $(".login").css("border-radius", "0px");
 });
 
-$("#email").keyup(() => {
-    $("#message").html("lakshdf").css("color", "red");
-    // alert("kljhasdf");
+// checks if values for password and confirm password for signing up are the same
+$("#signup-password, #confirm-password").on('keyup', () => {
+    if($("#signup-password").val() != $("#confirm-password").val()) {
+        $("#signup-message").html("Passwords do not match").css({"color": "red"});
+        document.getElementById('signup').disabled = true;
+    }
+
+    if($("#signup-password").val() == $("#confirm-password").val()) {
+        $("#signup-message").html("")
+        document.getElementById('signup').disabled = false;
+    }
 });
