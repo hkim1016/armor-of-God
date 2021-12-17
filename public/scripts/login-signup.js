@@ -28,3 +28,8 @@ $(".signup").click(() => {
     // $(".signup").css("border-radius", "30px");
     // $(".login").css("border-radius", "0px");
 });
+
+$("#email").keyup(() => {
+    $("#message").html("lakshdf").css("color", "red");
+    // alert("kljhasdf");
+});
