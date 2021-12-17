@@ -14,4 +14,8 @@ router.get('/contact', (req, res) => {
     res.render('../views/contact');
 });
 
+router.get('/logsign', (req, res) => {
+    res.render('../views/login-signup');
+});
+
 module.exports = router;
