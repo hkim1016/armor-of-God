@@ -4,10 +4,19 @@
 
     <nav>
         <ul class="navlinks">
-            <li><a href="/">Home</a></li>
+            <% if (user == null) { %>
+                <li><a href="/">Home</a></li>
+            <% } else { %>
+                <li><a href="#">Verses</a></li>
+            <% } %>
             <li><a href="/about">About</a></li>
             <li><a href="/contact">Contact</a></li>
+            <% if (user != null) { %>
+                <li><a href="/logout">Logout</a></li>
+            <% } %>
         </ul>
     </nav>
-    <a class="cta" href="/logsign"><button>Login/Signup</button></a>
+    <% if (user == null) { %>
+        <a class="cta" href="/logsign"><button>Login/Signup</button></a>
+    <% } %>
 </header>
