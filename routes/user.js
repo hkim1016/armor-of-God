@@ -12,11 +12,8 @@ router.get('/json', (req, res) => {
 
 router.post('/login', async (req, res) => {
     console.log("USER GET ROUTER: ", req.body);
-    let user;
-
-    await User.findOne({email: req.body.email, password: req.body.password}, (err, users) => {
-        console.log('users', users);
-        user = users;
+    const user = await User.findOne({email: req.body.email, password: req.body.password}, (err) => {
+        if(err) throw err;
     }).clone();
 
     req.session.user = user

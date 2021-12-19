@@ -1,13 +1,12 @@
 <header>
     <img class="logo" src="/images/armor-of-God.svg" alt="logo" style="width:149px; height:auto">
-    <!-- <h1 class="logo">AOG</h1> -->
 
     <nav>
         <ul class="navlinks">
             <% if (user == null) { %>
                 <li><a href="/">Home</a></li>
             <% } else { %>
-                <li><a href="#">Verses</a></li>
+                <li><a href="/">Verses</a></li>
             <% } %>
             <li><a href="/about">About</a></li>
             <li><a href="/contact">Contact</a></li>

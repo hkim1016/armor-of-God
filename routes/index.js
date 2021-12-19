@@ -5,9 +5,11 @@ var urlencodedParser = bodyParser.urlencoded({ extended: true })
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    // console.log(req.session.user);
-
-    res.render('../views/index');
+    if(!res.locals.user) {
+        res.render('../views/index');
+    } else {
+        res.render('../views/verses')
+    }
 });
 
 router.get('/about', (req, res) => {
@@ -15,7 +17,7 @@ router.get('/about', (req, res) => {
 });
 
 router.get('/contact', (req, res) => {
-    console.log('session', req.session.user);
+    // console.log('session', req.session.user);
     res.render('../views/contact');
 });
 
