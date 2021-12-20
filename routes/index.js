@@ -4,11 +4,15 @@ var urlencodedParser = bodyParser.urlencoded({ extended: true })
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
+const Verse = require('../models/Verse');
+
+router.get('/', async (req, res) => {
     if(!res.locals.user) {
         res.render('../views/index');
     } else {
-        res.render('../views/verses')
+        const verses = await Verse.find({user: res.locals.user._id});
+        // console.log(verses);
+        res.render('../views/verses', {verses: verses});
     }
 });
 
@@ -33,6 +37,14 @@ router.get('/logout', (req, res) => {
     }
 
     res.render('../views/index');
+});
+
+router.get('/verse/:id', async (req, res) => {
+    const id = req.params.id;
+
+    const verse = await Verse.findOne({_id: id});
+
+    res.render('../views/verse/verseExpand', {verse: verse});
 })
 
 module.exports = router;

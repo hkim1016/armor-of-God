@@ -12,14 +12,32 @@
         <%- include('partials/navbar'); %>
         <%- include('verse/addNewVerseModal'); %>
 
-        <p>Verses</p>
         <!-- Button trigger modal -->
-        <button type="button" data-bs-toggle="modal" data-bs-target="#addVerse">
-            Launch demo modal
+        <button type="button" id="new-verse" data-bs-toggle="modal" data-bs-target="#addVerse">
+            New Verse
         </button>
+        
+        <main>
+            <% verses.forEach((verse) => { %>
+                <form class="verses" method="POST" action="/verse/getVerse">
+                    <!-- <span style="display:none" id="verse-id" name="verseId"><%= verse._id %></span> -->
+                    <input style="display:none" id="verseId" name="verseId" value="<%= verse._id %>">
+                    <button class="verse-btn" type="submit"> 
+                        <h3 id="title"><%= verse.title %></h3>
+                        <h5 id="verse"><%= verse.verse %></h5>
+                        <span id="verseContent" style="display:none;"><%= verse.verseContent %></span>
+                        <% if(verse.note) { %>
+                            <span id="verseNote" style="display:none;"><%= verse.verseNote %></span>
+                        <% } %>
+                    </button>
+                </form>
+            <% }); %>
+        </main>
 
         <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+        <script src="/scripts/verse.js"></script>
         <script src="/scripts/navbar.js"></script>
     </body>
 </html>

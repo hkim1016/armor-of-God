@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 
 const verseSchema = new mongoose.Schema({
+    user: {
+        type: mongoose.Schema.Types.ObjectId
+    },
     title: {
         type: String,
         require: true
@@ -8,7 +11,7 @@ const verseSchema = new mongoose.Schema({
     verse: {
         type: String,
         require: true,
-        unique: true
+        // unique: true
     },
     verseContent: {
         type: String,

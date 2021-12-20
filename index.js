@@ -41,6 +41,7 @@ app.use((req, res, next) => {
 
 app.use('/', require('./routes'));
 app.use('/user', require('./routes/user'));
+app.use('/verse', require('./routes/verse'));
 
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}/`.blue);

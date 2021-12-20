@@ -1,9 +1,76 @@
-button {
-    margin-left: 20px;
-    padding: 7px 25px;
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: auto;
+    overflow: scroll;
+    /* align-items: center; */
+    justify-content: space-evenly;
+    /* border: 1px solid black; */
+}
+
+.verse-btn {
+    border: none;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+#submit {
     background-color: rgba(213, 197, 180, 1);
     border: none;
     border-radius: 10px;
+    font-size: 15px;
+    padding: 7px 15px;
+}
+
+#new-verse {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 7px 15px;
+    background-color: rgba(213, 197, 180, 1);
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 17px;
+    margin-bottom: 25px;
+    border: 2px solid gray;
+    outline: none;
+}
+
+#submit {
+    margin-top: -15px;
+    float: right;
+}
+
+.verses {
     cursor: pointer;
-    transition: all 0.3s ease 0s;
+    /* padding: 10px; */
+    border: 1px solid black;
+    /* align-items: center; */
+    text-align: center;
+    width: 230px;
+    height: 15%;
+    overflow: hidden;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.verse-btn:hover {
+    background-color: #F3F3F3;
 }

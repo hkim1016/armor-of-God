@@ -18,7 +18,7 @@ router.post('/login', async (req, res) => {
 
     req.session.user = user
 
-    res.redirect('/contact');
+    res.redirect('/');
 });
 
 router.post('/', async (req, res) => {

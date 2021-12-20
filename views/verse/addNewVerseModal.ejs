@@ -1,20 +1,27 @@
 <div class="modal fade" id="addVerse" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
 
             <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">asdfasdf</h5>
+                <h5 class="modal-title" id="staticBackdropLabel">Add New Memory Verse</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
             <div class="modal-body">
-                asdfasdf
+                <form action="/verse" method="POST" enctype="application/x-www-form-urlencoded">
+                    <input type="text" id="title" name="title" placeholder="New Title">
+                    <br>
+                    <input type="text" id="verse" name="verse" placeholder="Enter Bible Verse" required>
+                    <br>
+                    <textarea id="note" name="note" placeholder="Add Note"></textarea>
+                    <button type="submit" id="submit">Submit</button>
+                </form>
             </div>
 
-            <div class="modal-footer">
+            <!-- <div class="modal-footer">
                 <button type="button" data-bs-dismiss="modal">Close</button>
-                <!-- <button type="button" class="btn">Understood</button> -->
-            </div>
+                <button type="button" class="btn">Understood</button>
+            </div> -->
 
         </div>
     </div>
