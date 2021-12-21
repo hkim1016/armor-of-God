@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Shanti&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+.verseExpand {
+    margin: 10px 10px 10px 10px;
+    /* border: 1px solid black; */
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    padding: 40px 60px 60px 60px;
+    height: 65%;
+    /* padding-top: 0px; */
+    /* overflow: scroll; */
+}
+
+#title {
+    font-family: "Montserrat", sans-serif;
+}
+
+#verse {
+    font-family: "Roboto Slab", sans-serif;
+    margin-bottom: 20px;
+}
+
+#verseContent {
+    font-family: "Shanti", sans-serif;
+}
+
+#note {
+    margin-top: 20px;
+}
+
+form {
+    display: inline;
+    /* float: left; */
+    /* margin: 0px 0px 30px 0px; */
+}
+
+#edit, #delete {
+    margin: 30px 0px 30px 20px;
+    padding: 7px 15px;
+    background-color: rgba(213, 197, 180, 1);
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    width: 100px;
+}
+
+#edit {
+    margin-left: 0px;
+    margin-right: 20px;
+}

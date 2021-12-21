@@ -19,7 +19,7 @@
         
         <main>
             <% verses.forEach((verse) => { %>
-                <form class="verses" method="POST" action="/verse/getVerse">
+                <form class="verses" method="GET" action="/verse/<%= verse._id %>" enctype="application/x-www-form-urlencoded">
                     <!-- <span style="display:none" id="verse-id" name="verseId"><%= verse._id %></span> -->
                     <input style="display:none" id="verseId" name="verseId" value="<%= verse._id %>">
                     <button class="verse-btn" type="submit"> 

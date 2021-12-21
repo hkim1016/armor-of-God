@@ -6,4 +6,4 @@ $('#addVerse').on('hidden.bs.modal', function (e) {
         .find("input[type=checkbox], input[type=radio]")
             .prop("checked", "")
             .end();
-})
+});

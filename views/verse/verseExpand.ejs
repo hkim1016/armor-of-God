@@ -4,15 +4,30 @@
         <%- include('../partials/head'); %>
 
         <title>Verse</title>
+
+        <link rel="stylesheet" href="/css/verseExpand.css">
     </head>
     <body>
         <%- include('../partials/navbar'); %>
 
-        <h3><%= verse.title %></h3>
-        <h5><%= verse.verse %></h5>
-        <p><%= verse.verseContent %></p>
-        <% if (verse.note) { %>
-            <p><%= verse.note %></p>
-        <% } %>
+        <div class="verseExpand">
+            <h2 id="title"><%= verse.title %></h2>
+            <h4 id="verse"><%= verse.verse %></h4>
+            <p id="verseContent"><%= verse.verseContent %></p>
+            <% if (verse.note) { %>
+                <p id="note"><%= verse.note %></p>
+            <% } %>
+            <form class="edit">
+                <button type="submit" id="edit">Edit</button>
+            </form>
+    
+            <form class="delete">
+                <button type="submit" id="delete">Delete</button>
+            </form>
+        </div>
+
+        
+
+        <script src="/scripts/verse.js"></script>
     </body>
 </html>

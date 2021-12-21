@@ -6,13 +6,28 @@ const router = express.Router();
 
 const Verse = require('../models/Verse');
 
-router.post('/getVerse', async (req, res) => {
-    console.log('getting verse')
-    console.log(req.body.verseId);
+// router.post('/getVerse', async (req, res) => {
+//     console.log('getting verse')
+//     console.log(req.body.verseId);
 
-    const verse = await Verse.findOne({_id: req.body.verseId});
+//     const verse = await Verse.findOne({_id: req.body.verseId});
 
-    res.render('../views/verse/verseExpand', {verse: verse});
+//     res.render('../views/verse/verseExpand', {verse: verse});
+// });
+
+router.get('/getVerse', (req, res) => {
+    // console.log('redirect to this route, /getVerse');
+    // console.log('verse', req.session.selectedVerse);
+    res.render('../views/verse/verseExpand', {verse: req.session.selectedVerse});
+})
+
+router.get('/:id', async (req, res) => {
+    // console.log('verse id route get :(', req.params.id);
+    const verse = await Verse.findOne({_id: req.params.id});
+    // console.log("hello", verse)
+    req.session.selectedVerse = verse;
+
+    res.redirect('/verse/getVerse');
 });
 
 router.post('/', async (req, res) => {

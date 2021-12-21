@@ -39,12 +39,4 @@ router.get('/logout', (req, res) => {
     res.render('../views/index');
 });
 
-router.get('/verse/:id', async (req, res) => {
-    const id = req.params.id;
-
-    const verse = await Verse.findOne({_id: id});
-
-    res.render('../views/verse/verseExpand', {verse: verse});
-})
-
 module.exports = router;

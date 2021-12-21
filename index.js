@@ -28,7 +28,7 @@ db.on('error', (error) => console.error(error));
 db.once('open', () => console.log('Connected to Database'));
 
 app.use(session({ 
-    secret: "Armor of God",
+    secret: "alksdfhakshf9w3ur893u4hbrqh94eh983u918huj",
     saveUninitialized: false,
     cookie: { maxAge: 1000 * 60 * 60 * 24 },
     resave: false
