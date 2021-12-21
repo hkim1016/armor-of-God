@@ -64,4 +64,43 @@ router.post('/', async (req, res) => {
     res.redirect('/');
 });
 
+router.put('/', async (req, res) => {
+    console.log('verse put being called', req.body.verseId);
+    console.log(req.body.title);
+
+    let newTitle, newVerse, newNote, update = {};
+    if(req.body.title) {
+        update.title = req.body.title;
+    }
+
+    if(req.body.verse) {
+        update.verse = cv(req.body.verse);
+        let newVerseContent = '';
+        await bible.getVerse(req.body.verse, (err, data) => {
+            data.forEach(e => {
+                newVerseContent += e.text;
+            })
+        });
+        update.verseContent = newVerseContent;
+    }
+
+    if(req.body.note) {
+        update.note = req.body.note;
+    }
+
+    await Verse.findOneAndUpdate({_id: req.body.verseId}, update);
+
+    res.redirect('/');
+});
+
+router.delete('/', async (req, res) => {
+    console.log('verse delete being called', req.body.verseId);
+
+    await Verse.findOneAndDelete({_id: req.body.verseId}, (err) => {
+        if(err) throw err;
+    }).clone();
+
+    res.redirect('/')
+});
+
 module.exports = router;

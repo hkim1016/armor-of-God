@@ -10,8 +10,7 @@ const verseSchema = new mongoose.Schema({
     },
     verse: {
         type: String,
-        require: true,
-        // unique: true
+        require: true
     },
     verseContent: {
         type: String,

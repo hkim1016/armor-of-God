@@ -1,4 +1,4 @@
-$('#addVerse').on('hidden.bs.modal', function (e) {
+$('#addVerse, #editVerse').on('hidden.bs.modal', function (e) {
     $(this)
         .find("input,textarea,select")
             .val('')

@@ -28,6 +28,10 @@
     font-family: "Shanti", sans-serif;
 }
 
+textarea {
+    margin-top: 0px !important;
+}
+
 #note {
     margin-top: 20px;
 }
@@ -51,4 +55,22 @@ form {
 #edit {
     margin-left: 0px;
     margin-right: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 17px;
+    margin-bottom: 25px;
+    border: 2px solid gray;
+    outline: none;
+}
+
+#submit {
+    margin-top: -15px;
+    float: right;
+    background-color: rgba(213, 197, 180, 1);
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 7px 15px;
 }

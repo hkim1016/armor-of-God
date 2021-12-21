@@ -1,7 +1,6 @@
 const colors = require('colors');
 const session = require('express-session');
 const bodyParser = require('body-parser');
-const multer = require('multer');
 const methodOverride = require('method-override');
 const mongoose = require('mongoose');
 const express = require('express');
