@@ -2,7 +2,7 @@ const colors = require('colors');
 const session = require('express-session');
 const bodyParser = require('body-parser');
 const multer = require('multer');
-const upload = multer();
+const methodOverride = require('method-override');
 const mongoose = require('mongoose');
 const express = require('express');
 
@@ -26,6 +26,8 @@ mongoose.connect(MONGO_URI);
 const db = mongoose.connection;
 db.on('error', (error) => console.error(error));
 db.once('open', () => console.log('Connected to Database'));
+
+app.use(methodOverride('_method'));
 
 app.use(session({ 
     secret: "alksdfhakshf9w3ur893u4hbrqh94eh983u918huj",
