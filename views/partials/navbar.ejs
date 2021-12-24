@@ -18,4 +18,24 @@
     <% if (user == null) { %>
         <a class="cta" href="/logsign"><button>Login/Signup</button></a>
     <% } %>
+    <p class="menu cta" id="menu">Menu</p>
 </header>
+
+<div id="mobile__menu" class="overlay">
+    <a class="close">&times;</a>
+    <div class="overlay__content">
+        <% if (user == null) { %>
+            <a href="/">Home</a>
+        <% } else { %>
+            <a href="/">Verses</a>
+        <% } %>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <% if (user != null) { %>
+            <a href="/logout">Logout</a><
+        <% } %>
+        <% if (user == null) { %>
+            <a href="/logsign">Login/Signup</a>
+        <% } %>
+    </div>
+</div>
