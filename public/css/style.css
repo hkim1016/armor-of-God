@@ -5,7 +5,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* background-color: #24252A; */
 }
 
 .ephesians {
@@ -46,56 +45,10 @@
     font-family: "Roboto Slab", sans-serif;
 }
 
-li, a, button, h1 {
+button {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 16px;
     color: black;
     text-decoration: none;
-}
-
-header {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 30px 10%;
-}
-
-.logo {
-    margin-right: auto;
-    cursor: pointer;
-}
-
-.navlinks {
-    list-style: none;
-}
-
-.navlinks li {
-    display: inline-block;
-    padding: 0px 20px;
-    margin-top: 18px;
-}
-
-.navlinks li a {
-    transition: all 0.3s ease 0s;
-}
-
-.navlinks li a:hover {
-    color: #D5C5B4;
-}
-
-.cta button{
-    margin-left: 20px;
-    padding: 7px 25px;
-    /* background-color: rgba(0, 136, 169, 1); */
-    background-color: rgba(213, 197, 180, 1);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
-
-.cta button:hover {
-    /* background-color: rgba(0, 136, 169, 0.8); */
-    background-color: rgba(213, 197, 180, 0.7);
 }
