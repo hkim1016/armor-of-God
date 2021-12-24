@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const colors = require('colors');
 const session = require('express-session');
 const bodyParser = require('body-parser');
