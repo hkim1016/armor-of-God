@@ -52,3 +52,63 @@ button {
     color: black;
     text-decoration: none;
 }
+
+@media screen and (max-width: 1400px) {
+    .ephesians, .about, .contact {
+        /* font-size: 1em; */
+        width: 70%;
+        /* top: 100%; */
+        height: auto;
+        margin-top:10%;
+        padding-bottom: 10%;
+        font-size: 2vh;
+    }
+
+    .contact a {
+        font-size: 2vh;
+    }
+
+    .contact {
+        padding-left: 25%;
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    .ephesians, .about, .contact {
+        /* font-size: 1em; */
+        width: 70%;
+        /* top: 100%; */
+        height: auto;
+        margin-top:10%;
+        padding-bottom: 10%;
+        font-size: 2vh;
+    }
+
+    .contact a {
+        font-size: 2vh;
+    }
+
+    .contact {
+        padding-left: 17%;
+    }
+}
+
+@media screen and (max-width: 541px) {
+    .ephesians, .about, .contact {
+        /* font-size: 1em; */
+        width: 70%;
+        /* top: 100%; */
+        height: auto;
+        margin-top: 15%;
+        padding-bottom: 10%;
+        font-size: 1.7vh;
+    }
+
+    .contact a {
+        font-size: 1.7vh;
+    }
+
+    .contact {
+        padding-left: 7%;
+    }
+}

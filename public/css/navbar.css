@@ -116,10 +116,7 @@ li, a, button, h1, .overlay__content a {
 }
   
 @media only screen and (max-width: 817px) {
-    
-
-    .navlinks,
-    .cta {
+    .navlinks, .cta {
         display: none;
     }
 

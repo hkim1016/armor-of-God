@@ -59,10 +59,18 @@ input:focus {
     border: 0px;
 }
 
-/* #login:hover, #signup:hover {
-    background-color: rgba(213, 197, 180, 0.7);
-} */
+@media screen and (max-width: 1030px) {
+    .login-signup {
+        width: 60%;
+        height: auto;
+        font-size: 1.7vh;
+    }
+}
 
-/* #login {
-    margin-top: 87px;
-} */
+@media screen and (max-width: 541px) {
+    .login-signup {
+        width: 95%;
+        height: auto;
+        padding-top: 40px;
+    }
+}
